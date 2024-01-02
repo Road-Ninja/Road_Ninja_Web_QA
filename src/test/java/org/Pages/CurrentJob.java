@@ -1,0 +1,228 @@
+package org.Pages;
+
+import org.RNBase.UserBaseClass;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+
+public class CurrentJob extends UserBaseClass{
+	public CurrentJob() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	// login
+		@FindBy(how = How.XPATH, using = "//input[@name='username']")
+		private WebElement email;
+
+		@FindBy(how = How.XPATH, using = "//input[@name='password']")
+		private WebElement password;
+
+		@FindBy(how = How.XPATH, using = "//button[@type='submit']")
+		private WebElement next;
+
+		public WebElement getEmail() {
+			return email;
+		}
+
+		public WebElement getPassword() {
+			return password;
+		}
+
+		public WebElement getNext() {
+			return next;
+		}
+
+		// navigation
+
+		@FindBy(how = How.XPATH, using = "//a[@href='/jobs']")
+		private WebElement jobsPage;
+		
+		@FindBy(how = How.XPATH, using = "//span[contains(text(),'current')]")
+		private WebElement currentJobPage;
+
+		public WebElement getJobsPage() {
+			return jobsPage;
+		}
+
+		public WebElement getCurrentJobPage() {
+			return currentJobPage;
+		}
+		
+		// Filter option
+		// All Regions
+		@FindBy(how = How.XPATH, using = "//span[contains(text(),'All regions')]")
+		private WebElement allRegions;
+
+		@FindBy(how = How.XPATH, using = "//input[@name='N']")
+		private WebElement north;
+
+		@FindBy(how = How.XPATH, using = "//input[@name='S']")
+		private WebElement south;
+
+		@FindBy(how = How.XPATH, using = "//input[@name='auckland']")
+		private WebElement selectRegion;
+
+		public WebElement getAllRegions() {
+			return allRegions;
+		}
+
+		public WebElement getNorth() {
+			return north;
+		}
+
+		public WebElement getSouth() {
+			return south;
+		}
+
+		public WebElement getSelectRegion() {
+			return selectRegion;
+		}
+
+		// All Drivers
+		@FindBy(how = How.XPATH, using = "//span[contains(text(),'All drivers')]")
+		private WebElement allDrivers;
+
+		@FindBy(how = How.XPATH, using = "//input[@placeholder='Search driver']")
+		private WebElement serchDriver;
+
+		@FindBy(how = How.XPATH, using = "//div[contains(text(),'Bhandari Susant')]")
+		private WebElement selectDriver1;
+
+		@FindBy(how = How.XPATH, using = "//div[contains(text(),'Rohit Sharma')]")
+		private WebElement selectDriver2;
+
+		public WebElement getAlldrivers() {
+			return allDrivers;
+		}
+
+		public WebElement getAllDrivers() {
+			return allDrivers;
+		}
+
+		public WebElement getSerchDriver() {
+			return serchDriver;
+		}
+
+		public WebElement getSelectDriver1() {
+			return selectDriver1;
+		}
+
+		public WebElement getSelectDriver2() {
+			return selectDriver2;
+		}
+
+		// All Vehicles
+		@FindBy(how = How.XPATH, using = "//span[contains(text(),'All vehicles')]")
+		private WebElement allVehicles;
+
+		@FindBy(how = How.XPATH, using = "//div[contains(text(),'Nissan BlueBird')]")
+		private WebElement nissanB;
+
+		@FindBy(how = How.XPATH, using = "//div[contains(text(),'Honda Grace')]")
+		private WebElement honda;
+
+		@FindBy(how = How.XPATH, using = "//div[contains(text(),'Toyota CVR')]")
+		private WebElement toyota;
+
+		public WebElement getAllVehicles() {
+			return allVehicles;
+		}
+
+		public WebElement getNissanB() {
+			return nissanB;
+		}
+
+		public WebElement getHonda() {
+			return honda;
+		}
+
+		public WebElement getToyota() {
+			return toyota;
+		}
+		
+		// Remove Cross Button
+		
+		@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__2eGOB']//child::div[1]//child::button[2]")
+		private WebElement removeRegion;
+		
+		@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__2eGOB']//child::div[2]//child::button[2]")
+		private WebElement removeDriver;
+		
+		@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__2eGOB']//child::div[3]//child::button[2]")
+		private WebElement removeVehicle;
+
+		public WebElement getRemoveRegion() {
+			return removeRegion;
+		}
+
+		public WebElement getRemoveDriver() {
+			return removeDriver;
+		}
+
+		public WebElement getRemoveVehicle() {
+			return removeVehicle;
+		}
+		
+		
+		// Sort By Date Or Time
+		@FindBy(how = How.XPATH, using = "//span[contains(text(),'Sort by')]")
+		private WebElement sortBy;
+		
+		@FindBy(how = How.XPATH, using = "//li[contains(text(),'Title')]")
+		private WebElement title;
+
+		public WebElement getSortBy() {
+			return sortBy;
+		}
+
+		public WebElement getTitle() {
+			return title;
+		}
+		
+		// Download Job Data to Excel
+		@FindBy(how = How.XPATH, using = "//button[contains(text(),'Job Data to Excel')]")
+		private WebElement downloadJobData;
+
+		public WebElement getDownloadJobData() {
+			return downloadJobData;
+		}
+		
+		// Search Job
+		@FindBy(how = How.XPATH, using = "//input[@placeholder='Search job']")
+		private WebElement searchJob;
+
+		public WebElement getSearchJob() {
+			return searchJob;
+		}
+		
+		// Select any Job
+		@FindBy(how = How.XPATH, using = "(//ul)[2]//li[1]//a")
+		private WebElement selectJob;
+		
+		@FindBy(how = How.XPATH, using = "//a[contains(text(),'Payment details')]")
+		private WebElement PaymentDetails;
+
+		public WebElement getSelectJob() {
+			return selectJob;
+		}
+
+		public WebElement getPaymentDetails() {
+			return PaymentDetails;
+		}
+		
+		// Send Message To driver
+		
+		@FindBy(how = How.XPATH, using = "//input[@placeholder='Type message here…']")
+		private WebElement chatbox;
+
+		public WebElement getChatbox() {
+			return chatbox;
+		}
+		
+		
+		
+
+
+
+}
