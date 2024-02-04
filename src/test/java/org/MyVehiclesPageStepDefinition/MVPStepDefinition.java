@@ -77,6 +77,38 @@ public class MVPStepDefinition extends UserBaseClass{
 		sendKeys(mv.getSearch(), Keys.CONTROL + "a" + Keys.BACK_SPACE);
 		
 	}
+	
+
+	@Given("Click on the add vehicle button, select type, Ownership, type of driving {string}, enter vehicle make {string}, vehicle model {string}, vehicle fleet number {string}, plate number {string}, year {string} and Click on the add vehicle button.")
+	public void click_on_the_add_vehicle_button_select_type_ownership_type_of_driving_enter_vehicle_make_vehicle_model_vehicle_fleet_number_plate_number_year_and_click_on_the_add_vehicle_button(String type, String make, String model, String fleet, String plate, String year) {
+		mv = new myvehicles();
+		clicks(mv.getSelectvehicle());
+		clicks(mv.getThreeDots());
+		clicks(mv.getEdit());
+		clicks(mv.getOwnership());
+		clicks(mv.getOwned());
+//		clicks(mv.getLeased());
+		sendKeys(mv.getTypeofDriving(), type + Keys.ARROW_DOWN + Keys.ENTER);
+		
+		sendKeys(mv.getVehicleMake(), Keys.CONTROL + "a");
+		sendKeys(mv.getVehicleMake(), make);
+		
+		sendKeys(mv.getVehicleModel(), Keys.CONTROL + "a");
+		sendKeys(mv.getVehicleModel(), model);
+		
+		sendKeys(mv.getVehiclefleetNumber(), Keys.CONTROL + "a");
+		sendKeys(mv.getVehiclefleetNumber(), fleet);
+		
+		sendKeys(mv.getPlateNumber(), Keys.CONTROL + "a");
+		sendKeys(mv.getPlateNumber(), plate);
+		
+		sendKeys(mv.getYear(), Keys.CONTROL + "a");
+		sendKeys(mv.getYear(), year);
+		
+		clicks(mv.getAdd());
+		refresh();
+	}
+
 
 	
 

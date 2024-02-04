@@ -143,7 +143,7 @@ public class myvehicles extends UserBaseClass{
 		
 		// Delete vehicle
 		
-		@FindBy(how = How.XPATH, using = "//span[contains(text(),'trailer')]")
+		@FindBy(how = How.XPATH, using = "(//ul)[2]//li[1]")
 		private WebElement selectvehicle;
 		
 		@FindBy(how = How.XPATH, using = "//span[contains(text(),'upcoming jobs')]")
@@ -200,10 +200,18 @@ public class myvehicles extends UserBaseClass{
 		}
 
 		// Search vehicle
-		@FindBy(how = How.XPATH, using = "// input[@type='search']")
+		@FindBy(how = How.XPATH, using = "//input[@type='search']")
 		private WebElement search;
 
 		public WebElement getSearch() {
 			return search;
+		}
+		
+		// Edit vehicle
+		@FindBy(how = How.XPATH, using = "//li[contains(text(),'Edit')]")
+		private WebElement edit;
+
+		public WebElement getEdit() {
+			return edit;
 		}
 }

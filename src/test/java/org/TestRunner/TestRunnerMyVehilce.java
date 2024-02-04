@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 glue = {"org.MyVehiclesPageStepDefinition"},
 dryRun = false,
 plugin = {"html:report/WebReport"},
-tags = "@Search"
+tags = "@EditVehicle"
 )
 public class TestRunnerMyVehilce {
 

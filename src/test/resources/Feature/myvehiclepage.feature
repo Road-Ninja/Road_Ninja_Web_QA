@@ -14,8 +14,7 @@ Feature: My Vehicle Page Testing
   Scenario: Add Vehicle
   Given Launch the URL
   And Enter email, password, click on the next button and navigate to My Vehicles
-  And Click on the add vehicle button, select type, Ownership, type of driving, enter vehicle make, vehicle model, vehicle fleet number, plate number, year and Click on the add vehicle button.
-  
+  And Click on the any vehicle or tralier, edit button, Ownership, type of driving, enter vehicle make, vehicle model, vehicle fleet number, plate number, year and Click on the add vehicle button.
   
   @DeleteVehicle
   Scenario: Delete Vehicle
@@ -29,4 +28,14 @@ Feature: My Vehicle Page Testing
   Given Launch the URL
   And Enter email, password, click on the next button and navigate to My Vehicles
   And Search the vehicle or trailer 
+  
+  @EditVehicle
+  Scenario: Edit Vehicle and Tralier
+  Given Launch the URL
+  And Enter email, password, click on the next button and navigate to My Vehicles
+  And Click on the add vehicle button, select type, Ownership, type of driving "<types>", enter vehicle make "<Make>", vehicle model "<Model>", vehicle fleet number "<Fleetno>", plate number "<Plateno>", year "<year>" and Click on the add vehicle button.
+   Examples: 
+      | types | Make  | Model | Fleetno | Plateno | year |
+      | Taxi  | Mazda | Alexa | BHA456  | PTY161  | 2017 |
+      
   
