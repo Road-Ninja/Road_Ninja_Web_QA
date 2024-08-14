@@ -104,7 +104,7 @@ public class CompanyProfile extends UserBaseClass{
 			}
 			
 			// Delete manager
-			@FindBy(how = How.XPATH, using = "(//p[contains(text(),'Pooja Adhikari')]//parent::div//preceding::button[1])")
+			@FindBy(how = How.XPATH, using = "//button[@aria-label='Open menu']")
 			private WebElement threeDot;
 			
 			@FindBy(how = How.XPATH, using = "(//li[contains(text(),'Delete')])")
@@ -131,11 +131,14 @@ public class CompanyProfile extends UserBaseClass{
 			@FindBy(how = How.XPATH, using = "(//input[@name='tradingName'])")
 			private WebElement tradName;
 			
-			@FindBy(how=How.XPATH,using="(//div[@id='mui-component-select-region'])")
+			@FindBy(how=How.XPATH,using="(//div[@id='mui-component-select-regions'])")
 			private WebElement yardlocations;
 			
-			@FindBy(how=How.XPATH,using="(//p[contains(text(),'Bay of Plenty')])")
-			private WebElement selectlocations;
+			@FindBy(how=How.XPATH,using="(//input[@type='checkbox'])[3]")
+			private WebElement selectlocation1;
+			
+			@FindBy(how=How.XPATH,using="(//input[@type='checkbox'])[16]")
+			private WebElement selectlocation2;
 			
 			@FindBy(how=How.XPATH,using="//input[@name='phone']")
 			private WebElement phoneNo;
@@ -143,8 +146,8 @@ public class CompanyProfile extends UserBaseClass{
 			@FindBy(how=How.XPATH,using="//div[@id='mui-component-select-numberOfVehicles']")
 			private WebElement totalvehicle;
 			
-			@FindBy(how=How.XPATH,using="//p[contains(text(),'16-35')]")
-			private WebElement selecttvehicle;
+			@FindBy(how=How.XPATH,using="//li[@data-value='16-35']") //(//ul)[4]//li[2]]
+			private WebElement vehicleNo;
 			
 			@FindBy(how=How.XPATH,using="//textarea[@name='description']")
 			private WebElement desc;
@@ -172,8 +175,12 @@ public class CompanyProfile extends UserBaseClass{
 				return yardlocations;
 			}
 
-			public WebElement getSelectlocations() {
-				return selectlocations;
+			public WebElement getSelectlocation1() {
+				return selectlocation1;
+			}
+
+			public WebElement getSelectlocation2() {
+				return selectlocation2;
 			}
 
 			public WebElement getPhoneNo() {
@@ -184,8 +191,8 @@ public class CompanyProfile extends UserBaseClass{
 				return totalvehicle;
 			}
 
-			public WebElement getSelecttvehicle() {
-				return selecttvehicle;
+			public WebElement getVehicleNo() {
+				return vehicleNo;
 			}
 
 			public WebElement getSaveCP() {
@@ -299,15 +306,9 @@ public class CompanyProfile extends UserBaseClass{
 			}
 			
 			// Delete Credit Cards
-			@FindBy(how=How.XPATH,using="(//ul)[3]//child::li[2]//child::div//child::button")
-			private WebElement editCC;
 			
 			@FindBy(how=How.XPATH,using="//li[contains(text(),'Delete')]")
 			private WebElement deleteCC;
-
-			public WebElement getEditCC() {
-				return editCC;
-			}
 
 			public WebElement getDeleteCC() {
 				return deleteCC;

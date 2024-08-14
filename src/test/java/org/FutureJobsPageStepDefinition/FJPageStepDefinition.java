@@ -38,74 +38,103 @@ public class FJPageStepDefinition extends UserBaseClass {
 		fj = new FutureJobs();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		// All dates filter
-		clicks(fj.getAllDates());
-		clicks(fj.getToday());
-		clicks(fj.getCurrentMonth());
-		clicks(fj.getUpcoming7Days());
-		clicks(fj.getUpcomingMonth());
-		clicks(fj.getCustom());
-		clicks(fj.getDate1());
-		clicks(fj.getSelectDate1());
-		clicks(fj.getDate2());
-//		clicks(fj.getPreviousb());
-//		clicks(fj.getNextb());
-		clicks(fj.getSelectDate2());
-		Thread.sleep(2000);
-		escape();
-		clicks(fj.getRemoveDate());
+		//		clicks(fj.getAllDates());
+		//		clicks(fj.getToday());
+		//		clicks(fj.getCurrentMonth());
+		//		clicks(fj.getUpcoming7Days());
+		//		clicks(fj.getUpcomingMonth());
+		//		clicks(fj.getCustom());
+		//		clicks(fj.getSelectDate1());
+		//		Thread.sleep(2000);
+		//		clicks(fj.getDate1());
+		//		Thread.sleep(2000);
+		//		clicks(fj.getSelectDate2());
+		//		Thread.sleep(2000);
+		//		clicks(fj.getNextb());
+		//		//clicks(fj.getPreviousb());
+		//		clicks(fj.getDate2());
+		//		Thread.sleep(2000);
+		//		escape();
+		//		Thread.sleep(2000);
+		//		clicks(fj.getRemoveDate());
 
 		// All regions
 		clicks(fj.getAllRegions());
 		clicks(fj.getNorth());
-//		clicks(j.getSouth());
-//		clicks(j.getSelectRegion());
+		clicks(fj.getSouth());
+		clicks(fj.getSelectRegion());
 		escape();
 		clicks(fj.getRemoveRegion());
-		
+
 		// All Drivers
 		clicks(fj.getAlldrivers());
-		sendKeys(fj.getSerchDriver(), "Rohit");
+		sendKeys(fj.getSerchDriver(), "Susant");
 		clear(fj.getSerchDriver());
 		clicks(fj.getSelectDriver1());
 		clicks(fj.getSelectDriver2());
 		escape();
 		clicks(fj.getRemoveDriver());
-		
-		
+
+
 		// All vehicles
 		clicks(fj.getAllVehicles());
-		clicks(fj.getNissanB());
-		clicks(fj.getHonda());
-		clicks(fj.getToyota());
+		clicks(fj.getVehicle1());
+		clicks(fj.getVehicle2());
+		clicks(fj.getVehicle3());
 		escape();
 		clicks(fj.getRemoveVehicle());
-		
+
 		// Sort By
 		clicks(fj.getSortBy());
 		clicks(fj.getTitle());
-		
-		
+
 		// Download Job Data to Excel
 		clicks(fj.getDownloadJobData());
-		
+
 	}
-	
+
 	@Given("Search the job {string}, click on the job, click on the payment details, close payment details block and send message to driver {string}")
 	public void search_the_job_click_on_the_job_click_on_the_payment_details_close_payment_details_block_and_send_message_to_driver(String job, String message) throws Exception {
 		fj = new FutureJobs();
-		
+
 		sendKeys(fj.getSearchJob(), job);
 		sendKeys(fj.getSearchJob(), Keys.CONTROL + "a" + Keys.BACK_SPACE);
+
 		clicks(fj.getSelectJob());
 		clicks(fj.getPaymentDetails());
 		escape();
 		sendKeys(fj.getChatbox(), message + Keys.ENTER);
-		
-		
-		
+
+	}
+
+	@Given("Click on the three dots and then edit job button, edit the job title {string} and desc {string}, select the vehicle and click on save button")
+	public void click_on_the_three_dots_and_then_edit_job_button_edit_the_job_title_and_desc_select_the_vehicle_and_click_on_save_button(String title, String desc) throws InterruptedException {
+		fj = new FutureJobs();
+
+		// edit job
+		// select the job and edit
+//		clicks(fj.getSelectJob()); 
+//		clicks(fj.getEditJob());
+
+		//edit through grid list of job 
+		clicks(fj.getThreeDot());  
+		clicks(fj.getEditButton());
+
+		sendKeys(fj.getJobTitle(), Keys.CONTROL + "a" + Keys.BACK_SPACE);
+		sendKeys(fj.getJobTitle(), title);
+
+		sendKeys(fj.getJobDesc(), Keys.CONTROL + "a" + Keys.BACK_SPACE);
+		sendKeys(fj.getJobDesc(), desc);
+
+		clicks(fj.getSelectvehicle());
+		clicks(fj.getVehicle());
+		Thread.sleep(2000);
+
+		clicks(fj.getSave());
+		Thread.sleep(2000);
 	}
 
 
-		
+
 
 }

@@ -10,7 +10,7 @@ Feature: JOb Request Testing
     And Enter email "<email>", password "<password>" and click on the next button
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
      
      
   @Navigation
@@ -20,7 +20,7 @@ Feature: JOb Request Testing
     And Navigate to Driver
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
       
       
    @Date&Time   
@@ -31,11 +31,11 @@ Feature: JOb Request Testing
     And Select date and time
      Examples: 
       | url  																 | email 											 | password    | 
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ | 
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ | 
       
   
   @Regions
-   Scenario Outline: Select date and time 
+   Scenario Outline: Select Regions
     Given Launch the URL "<url>"
     And Enter email "<email>", password "<password>" and click on the next button
     And Navigate to Driver
@@ -43,11 +43,11 @@ Feature: JOb Request Testing
     And Select Regions
      Examples: 
       | url  																 | email 											 | password    | 
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |    
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |   
       
      
    @Skills
-   Scenario Outline: Select date and time 
+   Scenario Outline: Select Skills
     Given Launch the URL "<url>"
     And Enter email "<email>", password "<password>" and click on the next button
     And Navigate to Driver
@@ -56,11 +56,11 @@ Feature: JOb Request Testing
     And Select Licence class, type of vehicle, endorsement, gearbox experience and vehicle combination
      Examples: 
       | url  																 | email 											 | password    | 
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |    
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |   
        
       
    @Search
-   Scenario Outline: Select date and time 
+   Scenario Outline: Enter fixed price rate
     Given Launch the URL "<url>"
     And Enter email "<email>", password "<password>" and click on the next button
     And Navigate to Driver
@@ -70,12 +70,12 @@ Feature: JOb Request Testing
     And Enter the fixed price "<rate>" and click on the search
      Examples: 
       | url  																 | email 											 | password    | rate |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |  500 |  
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |  500 |  
        
       
       
   @SelectDriver    
-   Scenario Outline: Select date and time 
+   Scenario Outline: Select the driver
     Given Launch the URL "<url>"
     And Enter email "<email>", password "<password>" and click on the next button
     And Navigate to Driver
@@ -86,11 +86,11 @@ Feature: JOb Request Testing
     And Select the driver and click on the Next button
      Examples: 
       | url  																 | email 											 | password    | rate |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |  500 |  
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |  500 |  
           
       
   @DetailsPage
-   Scenario Outline: Select date and time 
+   Scenario Outline: Enter the details
     Given Launch the URL "<url>"
     And Enter email "<email>", password "<password>" and click on the next button
     And Navigate to Driver
@@ -102,11 +102,11 @@ Feature: JOb Request Testing
     And Enter the job title "<title>", description "<description>", select the vehicle, tick the tickbox and click on the next button
      Examples: 
       | url  																 | email 											 | password    | rate | title | description |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |  500 | Hello | Hello Hello |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |  500 | Testing | Hello Hello |
               
       
    @SendRequest   
-   Scenario Outline: Select date and time 
+   Scenario Outline: Send Job Request
     Given Launch the URL "<url>"
     And Enter email "<email>", password "<password>" and click on the next button
     And Navigate to Driver
@@ -116,9 +116,10 @@ Feature: JOb Request Testing
     And Enter the fixed price "<rate>" and click on the search
     And Select the driver and click on the Next button
     And Enter the job title "<title>", description "<description>", select the vehicle, tick the tickbox and click on the next button
-    And Add a Additional terms "<terms>", tick the tickbox, select the assignment criteria and click on the send request button
+    And Select the assignment criteria and click on the send request button
+   # And Add a Additional terms "<terms>", tick the tickbox,
      Examples: 
       | url  																 | email 											 | password    | rate | title | description | terms |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |  500 | Hello | Hello Hello | Hello |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |  500 | Testing | Hello Hello | Please follw the General Terms |
                  
       

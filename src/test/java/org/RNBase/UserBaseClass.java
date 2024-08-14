@@ -174,7 +174,7 @@ public class UserBaseClass {
 
 	public static String excelRead(int rowNo, int cellNo) throws IOException {
 
-		File f = new File("C:\\Users\\susan\\eclipse-RoadNinja\\CucumberFramework\\data\\TestData.xlsx");
+		File f = new File("D:\\Road Ninja\\eclipse-RoadNinja\\CucumberFramework\\data\\TestData.xlsx");
 		FileInputStream fi = new FileInputStream(f);
 		Workbook wb = new XSSFWorkbook(fi);
 		Sheet sh = wb.getSheet("Sheet1");
@@ -209,7 +209,7 @@ public class UserBaseClass {
 	}
 
 	public static void writeExcel(int rowNo, int cellNo1) throws IOException {
-		File f = new File("C:\\Users\\susan\\eclipse-RoadNinja\\CucumberFramework\\data\\TestData.xlsx");
+		File f = new File("D:\\Road Ninja\\eclipse-RoadNinja\\CucumberFramework\\data\\TestData.xlsx");
 		FileInputStream fi = new FileInputStream(f);
 		Workbook wb = new XSSFWorkbook(fi);
 		Sheet s = wb.getSheet("Sheet2");

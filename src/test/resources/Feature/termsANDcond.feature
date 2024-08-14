@@ -10,24 +10,24 @@ Feature: Terms and conditions Testing
   And Enter email "<email>", password "<password>", click on the next button and navigate to the terms and conditions
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
 
  @Terms
-  Scenario: Login to Road Ninja Application and Navigate to Company Profile
+  Scenario: Navigate to the Terms
   Given Launch the URL "<url>"
   And Enter email "<email>", password "<password>", click on the next button and navigate to the terms and conditions
   And Click on the hyperlink of the Road Ninja App present under the website terms of use
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
       
       
  @PrivacyPolicy
-  Scenario: Login to Road Ninja Application and Navigate to Company Profile
+  Scenario: Navigate to the Privacy Policy
   Given Launch the URL "<url>"
   And Enter email "<email>", password "<password>", click on the next button and navigate to the terms and conditions
   And Click on all the hyperlink present under the Privacy Policy.
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |   
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
       

@@ -143,7 +143,7 @@ public class myvehicles extends UserBaseClass{
 		
 		// Delete vehicle
 		
-		@FindBy(how = How.XPATH, using = "(//ul)[2]//li[1]")
+		@FindBy(how = How.XPATH, using = "(//ul)[2]//li[3]")
 		private WebElement selectvehicle;
 		
 		@FindBy(how = How.XPATH, using = "//span[contains(text(),'upcoming jobs')]")
@@ -214,4 +214,65 @@ public class myvehicles extends UserBaseClass{
 		public WebElement getEdit() {
 			return edit;
 		}
+		
+		// close
+		@FindBy(how = How.XPATH, using = "//button[@aria-label='Close']")
+		private WebElement close;
+
+		public WebElement getClose() {
+			return close;
+		}
+		
+		// Sort By
+		@FindBy(how = How.XPATH, using = "//span[contains(text(),'Sort by')]")
+		private WebElement sortBy;
+		
+		@FindBy(how = How.XPATH, using = "//li[contains(text(),'Fleet number')]")
+		private WebElement fleetNo;
+		
+		@FindBy(how = How.XPATH, using = "//li[contains(text(),'Completed jobs count')]")
+		private WebElement jobCount;
+		
+		@FindBy(how = How.XPATH, using = "//li[contains(text(),'Work time')]")
+		private WebElement workTime;
+		
+		@FindBy(how = How.XPATH, using = "//span[contains(text(),' reports count')]")
+		private WebElement repCount;
+		
+		@FindBy(how = How.XPATH, using = "//span[contains(text(),'success percent')]")
+		private WebElement sucessPer;
+
+		public WebElement getSortBy() {
+			return sortBy;
+		}
+
+		public WebElement getFleetNo() {
+			return fleetNo;
+		}
+
+		public WebElement getJobCount() {
+			return jobCount;
+		}
+
+		public WebElement getWorkTime() {
+			return workTime;
+		}
+
+		public WebElement getRepCount() {
+			return repCount;
+		}
+
+		public WebElement getSucessPer() {
+			return sucessPer;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 }

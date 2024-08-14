@@ -1,5 +1,6 @@
 package org.CompanyProfileStepDefinition;
 
+import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
@@ -53,6 +54,7 @@ public class CPstepDefinition extends UserBaseClass{
 	@Given("Click on the three dot on mamager profile, and delete the mamager")
 	public void click_on_the_three_dot_on_mamager_profile_and_delete_the_mamager() {
 		cp = new CompanyProfile();
+		moveToElement(cp.getAddmanager());
 		clicks(cp.getThreeDot());
 		clicks(cp.getDeletemanager());
 	}
@@ -82,15 +84,18 @@ public class CPstepDefinition extends UserBaseClass{
 		sendKeys(cp.getTradName(), tradname);
 		
 		clicks(cp.getYardlocations());
-		clicks(cp.getSelectlocations());
+		clicks(cp.getSelectlocation1());
+		clicks(cp.getSelectlocation2());
+		escape();
 		
 		sendKeys(cp.getPhoneNo(), Keys.CONTROL + "a");
 		sendKeys(cp.getPhoneNo(), phone);
 		
 		clicks(cp.getTotalvehicle());
-		clicks(cp.getSelecttvehicle());
+		Thread.sleep(2000);
+		clicks(cp.getVehicleNo());
 		
-		sendKeys(cp.getDesc(), Keys.CONTROL + "a");
+		//sendKeys(cp.getDesc(), Keys.CONTROL + "a");
 		sendKeys(cp.getDesc(), desc);
 		
 		clicks(cp.getSaveCP());
@@ -105,26 +110,26 @@ public class CPstepDefinition extends UserBaseClass{
 		clicks(cp.getJob1());
 		clicks(cp.getPay());
 	
-		clicks(cp.getAnotherCC());
-		sendKeys(cp.getCname(), cname);
-		Robot r = new Robot();
-		r.keyPress(KeyEvent.VK_TAB);
-		r.keyRelease(KeyEvent.VK_TAB);
+//		clicks(cp.getAnotherCC());
+//		sendKeys(cp.getCname(), cname);
+//		Robot r = new Robot();
+//		r.keyPress(KeyEvent.VK_TAB);
+//		r.keyRelease(KeyEvent.VK_TAB);
+//		
+//		r.keyPress(KeyEvent.VK_4);
+//		r.keyRelease(KeyEvent.VK_4);
+//		
+//		r.keyPress(KeyEvent.VK_4);
+//		r.keyRelease(KeyEvent.VK_4);
+//		
+//		clicks(cp.getCnumber());
+//		Thread.sleep(4000);
+//		sendKeys(cp.getCnumber(), cnum); 
+//		sendKeys(cp.getExpDate(), date);
+//		sendKeys(cp.getCvc(), cvc);
+//		clicks(cp.getSavecard());
 		
-		r.keyPress(KeyEvent.VK_4);
-		r.keyRelease(KeyEvent.VK_4);
-		
-		r.keyPress(KeyEvent.VK_4);
-		r.keyRelease(KeyEvent.VK_4);
-		
-		clicks(cp.getCnumber());
-		Thread.sleep(4000);
-		sendKeys(cp.getCnumber(), cnum); 
-		sendKeys(cp.getExpDate(), date);
-		sendKeys(cp.getCvc(), cvc);
-		clicks(cp.getSavecard());
-		
-//		clicks(cp.getMakePayment());
+		clicks(cp.getMakePayment());
 		
 	}
 	
@@ -135,12 +140,22 @@ public class CPstepDefinition extends UserBaseClass{
 	}
 	
 	@Given("Click on the Credit cards and add CC, enter card name {string}, card number {string}, expiry date {string}, CVC {string} and click on the save CC")
-	public void click_on_the_credit_cards_and_add_cc_enter_card_name_card_number_expiry_date_cvc_and_click_on_the_save_cc(String cname, String cnum, String date, String cvc) {
+	public void click_on_the_credit_cards_and_add_cc_enter_card_name_card_number_expiry_date_cvc_and_click_on_the_save_cc(String cname, String cnum, String date, String cvc) throws AWTException {
 		cp = new CompanyProfile();
 		clicks(cp.getCreditCards());
 		clicks(cp.getAddCC());
 		
 		sendKeys(cp.getCname(), cname);
+//		Robot r = new Robot();
+//		r.keyPress(KeyEvent.VK_TAB);
+//		r.keyRelease(KeyEvent.VK_TAB);
+//		
+//		r.keyPress(KeyEvent.VK_4);
+//		r.keyRelease(KeyEvent.VK_4);
+//		
+//		r.keyPress(KeyEvent.VK_4);
+//		r.keyRelease(KeyEvent.VK_4);
+		
 		sendKeys(cp.getCnumber(), cnum); 
 		sendKeys(cp.getExpDate(), date);
 		sendKeys(cp.getCvc(), cvc);
@@ -151,7 +166,7 @@ public class CPstepDefinition extends UserBaseClass{
 	public void click_on_the_credit_cards_three_vertical_dot_and_delete_the_card() {
 		cp = new CompanyProfile();
 		clicks(cp.getCreditCards());
-		clicks(cp.getEditCC());
+		clicks(cp.getThreeDot());
 		clicks(cp.getDeleteCC());
 	}
 

@@ -69,16 +69,16 @@ public class PastJob extends UserBaseClass {
 			@FindBy(how = How.XPATH, using = "//span[contains(text(),'Custom')]")
 			private WebElement custom;
 
-			@FindBy(how = How.XPATH, using = "//a[contains(text(),'22 Sep')]")
+			@FindBy(how = How.XPATH, using = "(//div[@class='MuiPickersCalendar-week'])[4]//child::div[2]")
 			private WebElement date1;
 
-			@FindBy(how = How.XPATH, using = "//a[contains(text(),'22 Nov')]")
+			@FindBy(how = How.XPATH, using = "(//div[@class='MuiPickersCalendar-week'])[4]//child::div[2]")
 			private WebElement date2;
 
-			@FindBy(how = How.XPATH, using = "//div[@class='MuiPickersSlideTransition-transitionContainer MuiPickersCalendar-transitionContainer']//child::div[4]//child::div[7]")
+			@FindBy(how = How.XPATH, using = "//div[@class='DatesFilter_custom__F4cIM DatesFilter_custom_active__zsoBL']//child::a[1]")
 			private WebElement selectDate1;
 
-			@FindBy(how = How.XPATH, using = "//div[@class='MuiPickersSlideTransition-transitionContainer MuiPickersCalendar-transitionContainer']//child::div[3]//child::div[3]")
+			@FindBy(how = How.XPATH, using = "//div[@class='DatesFilter_custom__F4cIM DatesFilter_custom_active__zsoBL']//child::a[2]")
 			private WebElement selectDate2;
 
 			@FindBy(how = How.XPATH, using = "//div[@class='MuiPickersCalendarHeader-switchHeader']//child::button[1]")
@@ -215,16 +215,17 @@ public class PastJob extends UserBaseClass {
 			}
 
 			// All Drivers
+			
 			@FindBy(how = How.XPATH, using = "//span[contains(text(),'All drivers')]")
 			private WebElement allDrivers;
 
 			@FindBy(how = How.XPATH, using = "//input[@placeholder='Search driver']")
 			private WebElement serchDriver;
 
-			@FindBy(how = How.XPATH, using = "//div[contains(text(),'Bhandari Susant')]")
+			@FindBy(how = How.XPATH, using = "(//input[@type='radio'])[1]")
 			private WebElement selectDriver1;
 
-			@FindBy(how = How.XPATH, using = "//div[contains(text(),'Rohit Sharma')]")
+			@FindBy(how = How.XPATH, using = "(//input[@type='radio'])[2]")
 			private WebElement selectDriver2;
 
 			public WebElement getAlldrivers() {
@@ -248,49 +249,50 @@ public class PastJob extends UserBaseClass {
 			}
 
 			// All Vehicles
+			
 			@FindBy(how = How.XPATH, using = "//span[contains(text(),'All vehicles')]")
 			private WebElement allVehicles;
 
-			@FindBy(how = How.XPATH, using = "//div[contains(text(),'Nissan BlueBird')]")
-			private WebElement nissanB;
+			@FindBy(how = How.XPATH, using = "(//input[@type='checkbox'])[1]")
+			private WebElement vehicle1;
 
-			@FindBy(how = How.XPATH, using = "//div[contains(text(),'Honda Grace')]")
-			private WebElement honda;
+			@FindBy(how = How.XPATH, using = "(//input[@type='checkbox'])[1]")
+			private WebElement vehicle2;
 
-			@FindBy(how = How.XPATH, using = "//div[contains(text(),'Toyota CVR')]")
-			private WebElement toyota;
+			@FindBy(how = How.XPATH, using = "(//input[@type='checkbox'])[1]")
+			private WebElement vehicle3;
 
 			public WebElement getAllVehicles() {
 				return allVehicles;
 			}
 
-			public WebElement getNissanB() {
-				return nissanB;
+			public WebElement getVehicle1() {
+				return vehicle1;
 			}
 
-			public WebElement getHonda() {
-				return honda;
+			public WebElement getVehicle2() {
+				return vehicle2;
 			}
 
-			public WebElement getToyota() {
-				return toyota;
+			public WebElement getVehicle3() {
+				return vehicle3;
 			}
 			
 			
 			// Remove Cross Button
-			@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__2eGOB']//child::div[1]//child::button[2]")
+			@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__jiSB2']//child::div[1]//child::button[2]")
 			private WebElement removeDate;
 			
-			@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__2eGOB']//child::div[2]//child::button[2]")
+			@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__jiSB2']//child::div[2]//child::button[2]")
 			private WebElement removeStatus;
 			
-			@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__2eGOB']//child::div[3]//child::button[2]")
+			@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__jiSB2']//child::div[3]//child::button[2]")
 			private WebElement removeRegion;
 			
-			@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__2eGOB']//child::div[4]//child::button[2]")
+			@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__jiSB2']//child::div[4]//child::button[2]")
 			private WebElement removeDriver;
 			
-			@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__2eGOB']//child::div[5]//child::button[2]")
+			@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__jiSB2']//child::div[5]//child::button[2]")
 			private WebElement removeVehicle;
 
 			public WebElement getRemoveDate() {
@@ -451,23 +453,16 @@ public class PastJob extends UserBaseClass {
 			}
 			
 			// Confirm Job
-			@FindBy(how = How.XPATH, using = "(//ul)[2]//li[1]//a")
-			private WebElement jobToConfirm;
 			
 			@FindBy(how = How.XPATH, using = "//span[contains(text(),'Confirm')]")
 			private WebElement confirmButton;
 
-			public WebElement getJobToConfirm() {
-				return jobToConfirm;
-			}
-
+			
 			public WebElement getConfirmButton() {
 				return confirmButton;
 			}
 			
 			// Payment through Ready to pay
-			@FindBy(how = How.XPATH, using = "(//ul)[2]//li[1]//a")
-			private WebElement jobReadyToPay;
 			
 			@FindBy(how=How.XPATH,using="//div[contains(text(),'Ready to pay')]")
 			private WebElement readyToPayButton;
@@ -496,9 +491,7 @@ public class PastJob extends UserBaseClass {
 			@FindBy(how=How.XPATH,using="//span[contains(text(),'Make payment')]")
 			private WebElement makePayment;
 
-			public WebElement getJobReadyToPay() {
-				return jobReadyToPay;
-			}
+			
 
 			public WebElement getReadyToPayButton() {
 				return readyToPayButton;
@@ -538,19 +531,13 @@ public class PastJob extends UserBaseClass {
 			
 			// Paid Job
 			
-			@FindBy(how = How.XPATH, using = "//h3[contains(text(),'Payment')]")
-			private WebElement jobpaid;
-			
 			@FindBy(how = How.XPATH, using = "//button[contains(text(),'Download PDF')]")
 			private WebElement downloadInvoice;
 			
 			@FindBy(how = How.XPATH, using = "//button[@aria-label='Close']")
 			private WebElement closePaymentBox;
 
-			public WebElement getJobpaid() {
-				return jobpaid;
-			}
-
+			
 			public WebElement getDownloadInvoice() {
 				return downloadInvoice;
 			}
@@ -558,4 +545,6 @@ public class PastJob extends UserBaseClass {
 			public WebElement getClosePaymentBox() {
 				return closePaymentBox;
 			}
+
+			
 }

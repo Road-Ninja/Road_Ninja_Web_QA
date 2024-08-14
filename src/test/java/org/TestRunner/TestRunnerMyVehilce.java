@@ -6,11 +6,11 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"C:\\Users\\susan\\eclipse-RoadNinja\\CucumberFramework\\src\\test\\resources\\Feature\\myvehiclepage.feature"},
+@CucumberOptions(features = {"D:\\Road Ninja\\eclipse-RoadNinja\\CucumberFramework\\src\\test\\resources\\Feature\\myvehiclepage.feature"},
 glue = {"org.MyVehiclesPageStepDefinition"},
 dryRun = false,
 plugin = {"html:report/WebReport"},
-tags = "@EditVehicle"
+tags = "@SortBy"
 )
 public class TestRunnerMyVehilce {
 

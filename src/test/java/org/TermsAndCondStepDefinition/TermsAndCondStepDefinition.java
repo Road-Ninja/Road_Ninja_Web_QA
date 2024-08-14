@@ -22,24 +22,38 @@ public class TermsAndCondStepDefinition extends UserBaseClass {
 
 	
 	@Given("Enter email {string}, password {string}, click on the next button and navigate to the terms and conditions")
-	public void enter_email_password_click_on_the_next_button_and_navigate_to_the_terms_and_conditions(String email, String pass) {
+	public void enter_email_password_click_on_the_next_button_and_navigate_to_the_terms_and_conditions(String email, String pass) throws InterruptedException {
 		tc = new TermsAndConditions();
 		sendKeys(tc.getEmail(), email);
 		sendKeys(tc.getPassword(), pass);
 		clicks(tc.getNext());
 		
 		moveToElement(tc.getSideBar());
-//		clicks(tc.getSupport());
-//		back();
-		clicks(tc.getTermsAndCond());
+		clicks(tc.getSupport());
+		Thread.sleep(2000);
+		back();
+//		clicks(tc.getTermsAndCond());
 	}
 
 
 	@Given("Click on the hyperlink of the Road Ninja App present under the website terms of use")
-	public void click_on_the_hyperlink_of_the_road_ninja_app_present_under_the_website_terms_of_use() {
+	public void click_on_the_hyperlink_of_the_road_ninja_app_present_under_the_website_terms_of_use() throws IOException, InterruptedException {
 		tc = new TermsAndConditions();
-		clicks(tc.getRoadNinjaApp());
-		back();
+
+//		clicks(tc.getRoadNinjaApp());
+//		sendKeys(tc.getEmail(), excelRead(2, 2));
+//		sendKeys(tc.getPassword(), excelRead(3, 2));
+//		clicks(tc.getNext());
+//		ParentWindow();
+		Thread.sleep(2000);
+		clicks(tc.getRoadNinjaWebsite());
+		ParentWindow();
+		Thread.sleep(2000);
+		
+		clicks(tc.getRoadNinjaPP());
+		Thread.sleep(2000);
+		
+		
 	}
 	
 	@Given("Click on all the hyperlink present under the Privacy Policy.")
@@ -50,11 +64,11 @@ public class TermsAndCondStepDefinition extends UserBaseClass {
 		clicks(tc.getTermsOfUse1());
 		back();
 		
-		clicks(tc.getApp());
-		sendKeys(tc.getEmail(), excelRead(1, 2));
-		sendKeys(tc.getPassword(), excelRead(1, 3));
-		clicks(tc.getNext());
-		back();
+//		clicks(tc.getApp());
+//		sendKeys(tc.getEmail(), excelRead(2, 2));
+//		sendKeys(tc.getPassword(), excelRead(3, 2));
+//		clicks(tc.getNext());
+//		back();
 		
 		clicks(tc.getWeb());
 		back();

@@ -7,88 +7,88 @@ Feature: Past Jobs Page Testing
   Scenario: Login to Road Ninja Application and Navigate to Past Jobs Page
   Given Launch the URL "<url>"
   And Enter email "<email>", password "<password>", click on the next button, click on the jobs at navigation and navigate to past job page
-     Examples: 
+       Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
     
     
   @Allfilter
-  Scenario: Past Job Page
+  Scenario: Applied filters
   Given Launch the URL "<url>"
-  And Enter email "<email>", password "<password>", click on the next button and navigate to Jobs Page
+  And Enter email "<email>", password "<password>", click on the next button, click on the jobs at navigation and navigate to past job page
   And Select the Select the date from the All dates, job ststus from all status, regions from the All regions, search driver "<searchDriver>" and select driver from the all drivers , vehicle from the all vehicle and select the sort by 
      Examples: 
       | url  																 | email 											 | password    | searchDriver |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ | Rohit  			|
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ | Susant  			|
      
   @SearchJob @SendMessage
-  Scenario: Past Job Page
+  Scenario: Search the job and send the message to the driver
   Given Launch the URL "<url>"
-  And Enter email "<email>", password "<password>", click on the next button and navigate to Jobs Page
+  And Enter email "<email>", password "<password>", click on the next button, click on the jobs at navigation and navigate to past job page
   And Search the job "<SearchJob>", click on the job, click on the payment details, close payment details block and send message to driver "<message>"
      Examples: 
       | url  																 | email 											 | password    | SearchJob | message 						 |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ | BTest		 | Hello, How are You? |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ | Test		 | Hello, How are You? |
     
    
   @Dispute   
-  Scenario: Login to Road Ninja Application and Navigate to Past Jobs Page
+  Scenario: Start and end the disput 
   Given Launch the URL "<url>"
-  And Enter email "<email>", password "<password>", click on the next button, click on the jobs at navigation and navigate to past job page
+ And Enter email "<email>", password "<password>", click on the next button, click on the jobs at navigation and navigate to past job page
   And Select any Past job, start a dispute and stop a dispue   
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+     | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
        
      
   @RateDriver   
-  Scenario: Login to Road Ninja Application and Navigate to Past Jobs Page
+  Scenario: Rate and review the driver
   Given Launch the URL "<url>"
   And Enter email "<email>", password "<password>", click on the next button, click on the jobs at navigation and navigate to past job page
   And Click on the Rate Driver button, selete the rating, enter the review "<review>" and click on the Save Review button
      Examples: 
       | url  																 | email 											 | password    | review 	   |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ | Good Driver |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ | Perfect Driver |
         
         
   @Pagination   
-  Scenario: Login to Road Ninja Application and Navigate to Past Jobs Page
+  Scenario: select the pagination
   Given Launch the URL "<url>"
   And Enter email "<email>", password "<password>", click on the next button, click on the jobs at navigation and navigate to past job page
   And Click on the next page button, previous page button and page number  
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
                
                
                
   @ConfirmJob   
-  Scenario: Login to Road Ninja Application and Navigate to Past Jobs Page
+  Scenario: Confirmed the job
   Given Launch the URL "<url>"
   And Enter email "<email>", password "<password>", click on the next button, click on the jobs at navigation and navigate to past job page
   And Select a past job and click on the confirm button
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
                     
   
   @Payment   
-  Scenario: Login to Road Ninja Application and Navigate to Past Jobs Page
+  Scenario: Payyment through past job tab
   Given Launch the URL "<url>"
   And Enter email "<email>", password "<password>", click on the next button, click on the jobs at navigation and navigate to past job page
-  And Select a ready to pay ststus job, click on the Ready to pay button, Pay button, another CC, enter card name "<Cname>", card number "<Cnum>", expiry date "<date>", CVC "<CVC>" and click on the Make payment
+  And Select a ready to pay status job, click on the Ready to pay button, Pay button, another CC, enter card name "<Cname>", card number "<Cnum>", expiry date "<date>", CVC "<CVC>" and click on the Make payment
     Examples: 
       | url  																 | email 											 | password    | Cname   | Cnum 						   | date | CVC |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ | Pooja B | 4242 4242 4242 4242 | 1234  | 567 |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ | Pooja B | 4242424242424242 | 1234  | 567 |
  
   @PaidJob   
-  Scenario: Login to Road Ninja Application and Navigate to Past Jobs Page
+  Scenario: Download the Invoice of the paid job
   Given Launch the URL "<url>"
   And Enter email "<email>", password "<password>", click on the next button, click on the jobs at navigation and navigate to past job page
   And Select a paid job, click on the payment details, download the Invoice and close payment deatils box
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |   
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |   
     
     
                                     

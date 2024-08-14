@@ -9,7 +9,7 @@ Feature: Company Profile Testing
   And Enter email "<email>", password "<password>", click on the next button and navigate to the company profile page
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
       
       
    @AddManager   
@@ -19,7 +19,7 @@ Feature: Company Profile Testing
   And Click on the Add, enter first name "<first name>", last name "<last name>", email "<emailadd>" and click on the save button   
      Examples: 
       | url  																 | email 											 | password    | first name | last name | emailadd						|
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ | Pooja      | Adhikari  | pooja1@roadninja.co.nz		| 
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ | Susant      | Bhad  | susant+1@roadninja.co.nz | 
         
      
   @DeleteManager     
@@ -29,7 +29,7 @@ Feature: Company Profile Testing
   And Click on the three dot on mamager profile, and delete the mamager    
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |  
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ | 
    
   
   @EditComPfl
@@ -39,7 +39,7 @@ Feature: Company Profile Testing
   And Click on the edit, enter company title "<title>", reg name "<regName>", trading name "<tradingName>", select loctions, enter phone number "<number>", select no. of vehicle, enter description "<dec>" and click on the save    
   Examples: 
       | url  																 | email 											 | password    | title | regName | tradingName | number 		| dec 									|
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ | Road  | Ninja   | Raod        | 0212693802 | Welcome to my Profile |         
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ | Heal the Pain  | Heal the Pain   | Heal the Pain       | 0212693802 | Welcome to my Profile |         
     
  
   @Payment
@@ -49,7 +49,7 @@ Feature: Company Profile Testing
   And click on the View payment, select the jobs, click on the pay button, another CC, enter card name "<Cname>", card number "<Cnum>", expiry date "<date>", CVC "<CVC>" and click on the Make payment
     Examples: 
       | url  																 | email 											 | password    | Cname   | Cnum 						   | date | CVC |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ | Sunil B | 4242 4242 4242 4242 | 1234  | 567 |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ | Sunil B | 4242 4242 4242 4242 | 1234  | 567 |
   
   @Reviews
   Scenario: Reviews
@@ -58,25 +58,25 @@ Feature: Company Profile Testing
   And click on the reviews  
   Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
       
   @AddCC
-  Scenario: Payment
+  Scenario: Add credit card details
   Given Launch the URL "<url>"
   And Enter email "<email>", password "<password>", click on the next button and navigate to the company profile page      
   And Click on the Credit cards and add CC, enter card name "<Cname>", card number "<Cnum>", expiry date "<date>", CVC "<CVC>" and click on the save CC
     Examples: 
       | url  																 | email 											 | password    | Cname   | Cnum 						   | date | CVC |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ | Sunil B | 4242 4242 4242 4242 | 1234  | 567 |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ | Sunil B | 4242 4242 4242 4242 | 1234  | 567 |
    
   @DeleteCC
-  Scenario: Reviews
+  Scenario: Delect Credit Card details
   Given Launch the URL "<url>"
   And Enter email "<email>", password "<password>", click on the next button and navigate to the company profile page      
   And Click on the Credit cards, three vertical dot and delete the card 
   Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
            
       
       

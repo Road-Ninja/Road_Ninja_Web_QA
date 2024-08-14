@@ -17,14 +17,14 @@ Feature: My Vehicle Page Testing
   And Click on the any vehicle or tralier, edit button, Ownership, type of driving, enter vehicle make, vehicle model, vehicle fleet number, plate number, year and Click on the add vehicle button.
   
   @DeleteVehicle
-  Scenario: Delete Vehicle
+  Scenario: Delete Vehicle or Trailer
   Given Launch the URL
   And Enter email, password, click on the next button and navigate to My Vehicles
   And click on the any vehicle or trailer, upcoming jobs, live jobs, completed jobs, PDC history and delete the vehicle or trailer
   
   
   @Search
-  Scenario: Delete Vehicle
+  Scenario: Search Vehicle
   Given Launch the URL
   And Enter email, password, click on the next button and navigate to My Vehicles
   And Search the vehicle or trailer 
@@ -38,4 +38,10 @@ Feature: My Vehicle Page Testing
       | types | Make  | Model | Fleetno | Plateno | year |
       | Taxi  | Mazda | Alexa | BHA456  | PTY161  | 2017 |
       
+      
+  @SortBy
+  Scenario: Search Vehicle
+  Given Launch the URL
+  And Enter email, password, click on the next button and navigate to My Vehicles
+  And Click on the Sort by plate number and applied the each sort by option    
   

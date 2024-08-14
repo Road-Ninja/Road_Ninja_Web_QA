@@ -10,7 +10,7 @@ Feature: Driver Jobs Page Testing
   And Enter email "<email>", password "<password>" and click on the next button
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
       
  
  @Payments
@@ -19,7 +19,7 @@ Feature: Driver Jobs Page Testing
   And Enter email "<email>", password "<password>", click on the next button and payment button of dashboard page.
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |     
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |     
   
  @CreateRequest
   Scenario: Create Request Page
@@ -27,7 +27,7 @@ Feature: Driver Jobs Page Testing
   And Enter email "<email>", password "<password>", click on the next button and Create Request button of dashboard page.
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |     
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |    
       
       
  @ChartMenu
@@ -37,7 +37,7 @@ Feature: Driver Jobs Page Testing
   And click on the chart menu (In total) and selete the options of chart.
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
  
  
  @JobRequest
@@ -47,7 +47,7 @@ Feature: Driver Jobs Page Testing
   And Click on the Job request of dashboard page.
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
  
  @FutureJobs
   Scenario: Future Jobs page
@@ -56,7 +56,7 @@ Feature: Driver Jobs Page Testing
   And Click on the future jobs of dashboard page.
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
             
  @PastJobs
   Scenario: Past Jobs page
@@ -65,7 +65,7 @@ Feature: Driver Jobs Page Testing
   And Click on the past jobs of dashboard page.
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
    
    
  @Drivers
@@ -75,7 +75,7 @@ Feature: Driver Jobs Page Testing
   And Click on the Drivers, worked with and select the options: Last time or Frequently.
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
         
         
  @VehicleList
@@ -85,7 +85,7 @@ Feature: Driver Jobs Page Testing
   And click on the top job vehicles and selete the options of top vehicle list.
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |
         
 
  @AllVehicles
@@ -95,7 +95,7 @@ Feature: Driver Jobs Page Testing
   And click on the view all vehicles
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |        
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |        
         
  
  @Vehicles
@@ -105,7 +105,7 @@ Feature: Driver Jobs Page Testing
   And click on the first, second and third vehicle from the vehicle grid
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |        
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |        
      
  
  @Ratings
@@ -115,7 +115,7 @@ Feature: Driver Jobs Page Testing
   And click on the view all ratings
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |        
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |        
                 
  
  @Company
@@ -125,7 +125,7 @@ Feature: Driver Jobs Page Testing
   And click on the view company profile
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |        
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |        
                                   
  @CurrentJob
   Scenario: Current Job page
@@ -134,7 +134,7 @@ Feature: Driver Jobs Page Testing
   And click on the current job
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |        
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |        
                                     
                     
  @NextCurrentJob
@@ -144,6 +144,6 @@ Feature: Driver Jobs Page Testing
   And click on the next pagination of current job
      Examples: 
       | url  																 | email 											 | password    |
-      | https://staging-app.roadninja.co.nz/ | susant+TEST@roadninja.co.nz | December06@ |        
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |        
                                      
                                                

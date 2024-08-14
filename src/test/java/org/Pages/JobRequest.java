@@ -500,7 +500,7 @@ public class JobRequest extends UserBaseClass {
 	@FindBy(how = How.XPATH, using = "//div[@id='mui-component-select-vehicle']")
 	private WebElement selectvehicle;
 	
-	@FindBy(how = How.XPATH, using = "//p[contains(text(),'Honda Grace')]")
+	@FindBy(how = How.XPATH, using = "(//ul)[4]//li[1]")
 	private WebElement honda;
 	
 	@FindBy(how = How.XPATH, using = "//input[@name='autoApprove']")

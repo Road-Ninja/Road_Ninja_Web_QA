@@ -86,10 +86,10 @@ public class CurrentJob extends UserBaseClass{
 		@FindBy(how = How.XPATH, using = "//input[@placeholder='Search driver']")
 		private WebElement serchDriver;
 
-		@FindBy(how = How.XPATH, using = "//div[contains(text(),'Bhandari Susant')]")
+		@FindBy(how = How.XPATH, using = "(//input[@type='radio'])[1]")
 		private WebElement selectDriver1;
 
-		@FindBy(how = How.XPATH, using = "//div[contains(text(),'Rohit Sharma')]")
+		@FindBy(how = How.XPATH, using = "(//input[@type='radio'])[2]")
 		private WebElement selectDriver2;
 
 		public WebElement getAlldrivers() {
@@ -116,40 +116,41 @@ public class CurrentJob extends UserBaseClass{
 		@FindBy(how = How.XPATH, using = "//span[contains(text(),'All vehicles')]")
 		private WebElement allVehicles;
 
-		@FindBy(how = How.XPATH, using = "//div[contains(text(),'Nissan BlueBird')]")
-		private WebElement nissanB;
+		@FindBy(how = How.XPATH, using = "(//input[@type='checkbox'])[1]")
+		private WebElement vehicle1;
 
-		@FindBy(how = How.XPATH, using = "//div[contains(text(),'Honda Grace')]")
-		private WebElement honda;
+		@FindBy(how = How.XPATH, using = "(//input[@type='checkbox'])[1]")
+		private WebElement vehicle2;
 
-		@FindBy(how = How.XPATH, using = "//div[contains(text(),'Toyota CVR')]")
-		private WebElement toyota;
+		@FindBy(how = How.XPATH, using = "(//input[@type='checkbox'])[1]")
+		private WebElement vehicle3;
 
 		public WebElement getAllVehicles() {
 			return allVehicles;
 		}
-
-		public WebElement getNissanB() {
-			return nissanB;
-		}
-
-		public WebElement getHonda() {
-			return honda;
-		}
-
-		public WebElement getToyota() {
-			return toyota;
-		}
 		
+		public WebElement getVehicle1() {
+			return vehicle1;
+		}
+
+		public WebElement getVehicle2() {
+			return vehicle2;
+		}
+
+		public WebElement getVehicle3() {
+			return vehicle3;
+		}
+
+	
 		// Remove Cross Button
-		
-		@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__2eGOB']//child::div[1]//child::button[2]")
+
+		@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__jiSB2']//child::div[1]//child::button[2]")
 		private WebElement removeRegion;
 		
-		@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__2eGOB']//child::div[2]//child::button[2]")
+		@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__jiSB2']//child::div[2]//child::button[2]")
 		private WebElement removeDriver;
 		
-		@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__2eGOB']//child::div[3]//child::button[2]")
+		@FindBy(how = How.XPATH, using = "//div[@class='FiltersPanel_filters__jiSB2']//child::div[3]//child::button[2]")
 		private WebElement removeVehicle;
 
 		public WebElement getRemoveRegion() {
@@ -218,6 +219,71 @@ public class CurrentJob extends UserBaseClass{
 
 		public WebElement getChatbox() {
 			return chatbox;
+		}
+		
+		// Edit job
+		
+		@FindBy(how = How.XPATH, using = "//button[@aria-label='Open menu']")
+		private WebElement threeDot;
+		
+		@FindBy(how = How.XPATH, using = "//li[@role='menuitem']")
+		private WebElement editButton;
+		
+		@FindBy(how = How.XPATH, using = "//a[contains(text(),'Edit job')]")
+		private WebElement editJob;
+		
+		@FindBy(how = How.XPATH, using = "//input[@name='title']")
+		private WebElement jobTitle;
+		
+		@FindBy(how = How.XPATH, using = "//textarea[@name='description']")
+		private WebElement jobDesc;
+		
+		@FindBy(how = How.XPATH, using = "//div[@id='mui-component-select-vehicle']")
+		private WebElement selectvehicle;
+		
+		@FindBy(how = How.XPATH, using = "(//ul)[4]//li[3]")
+		private WebElement vehicle;
+		
+		@FindBy(how = How.XPATH, using = "//input[@name='autoApprove']")
+		private WebElement autoapprove;
+		
+		@FindBy(how = How.XPATH, using = "//button[@type='submit']")
+		private WebElement save;
+
+		public WebElement getJobTitle() {
+			return jobTitle;
+		}
+
+		public WebElement getJobDesc() {
+			return jobDesc;
+		}
+
+		public WebElement getSelectvehicle() {
+			return selectvehicle;
+		}
+
+		public WebElement getVehicle() {
+			return vehicle;
+		}
+
+		public WebElement getAutoapprove() {
+			return autoapprove;
+		}
+
+		public WebElement getSave() {
+			return save;
+		}
+
+		public WebElement getThreeDot() {
+			return threeDot;
+		}
+
+		public WebElement getEditButton() {
+			return editButton;
+		}
+
+		public WebElement getEditJob() {
+			return editJob;
 		}
 		
 		

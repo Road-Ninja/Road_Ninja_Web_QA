@@ -34,7 +34,7 @@ public class TermsAndConditions extends UserBaseClass {
 				}
 				
 				// navigation
-				@FindBy(how = How.XPATH, using = "//aside[@class='Sidebar_root__1ymce']")
+				@FindBy(how = How.XPATH, using = "//a[@href='/drivers']")
 				private WebElement sideBar;
 				
 				@FindBy(how = How.XPATH, using = "//a[@href='/terms']")
@@ -56,13 +56,26 @@ public class TermsAndConditions extends UserBaseClass {
 				}
 				
 				// Terms and Conditions Page
-				@FindBy(how = How.XPATH, using = "//a[contains(text(),'https')]")
+				@FindBy(how = How.XPATH, using = "//a[contains(text(),'app.roadninja')]")
 				private WebElement roadNinjaApp;
+				
+				@FindBy(how = How.XPATH, using = "//a[@href='https://roadninja.co.nz/']")
+				private WebElement roadNinjaWebsite;
+				
+				@FindBy(how = How.XPATH, using = "//a[contains(text(),'https://roadninja.co.nz/privacy.html')]")
+				private WebElement roadNinjaPP;
 
 				public WebElement getRoadNinjaApp() {
 					return roadNinjaApp;
 				}
 				
+				public WebElement getRoadNinjaWebsite() {
+					return roadNinjaWebsite;
+				}
+
+				public WebElement getRoadNinjaPP() {
+					return roadNinjaPP;
+				}
 				// Privacy Policy Page
 				@FindBy(how = How.XPATH, using = "//span[contains(text(),'Privacy Policy')]")
 				private WebElement privacyPolicy;
