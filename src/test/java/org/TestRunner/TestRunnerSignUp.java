@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 glue = {"org.SignUpStepDefinition"},
 dryRun = false,
 plugin = {"html:report/WebReport"},
-tags = "@Second_Step"
+tags = "@LoginToSecondStep"
 
 		
 		)

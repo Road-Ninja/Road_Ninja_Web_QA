@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 glue = {"org.DashBoardStepDefinition"},
 dryRun = false,
 plugin = {"html:report/WebReport"},
-tags = "@Payments"
+tags = "@Notifications"
 )
 public class TestRunnerDashboard {
 

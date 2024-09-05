@@ -56,10 +56,10 @@ public class JobRequest extends UserBaseClass {
 	@FindBy(how = How.XPATH, using = "//button[@class='rdrNextPrevButton rdrNextButton']")
 	private WebElement nextb;
 	
-	@FindBy(how = How.XPATH, using = "(//div[@class='rdrDays']//child::button[4]")
+	@FindBy(how = How.XPATH, using = "//div[@class='rdrDays']//child::button[23]")
 	private WebElement date1;
 	
-	@FindBy(how = How.XPATH, using = "//div[@class='rdrDays']//child::button[8]")
+	@FindBy(how = How.XPATH, using = "//div[@class='rdrDays']//child::button[24]")
 	private WebElement date2;
 	
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Add')]")
@@ -540,14 +540,6 @@ public class JobRequest extends UserBaseClass {
 		return submit;
 	}
 	
-	// Itinerary page
-	
-	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Skip')]")
-	private WebElement itinerary;
-
-	public WebElement getItinerary() {
-		return itinerary;
-	}
 	
 	// Assignment Criteria page
 	

@@ -83,6 +83,13 @@ public class UserBaseClass {
 
 	}
 	
+	public void Alert() {
+		Alert a = driver.switchTo().alert();
+		  String text = a.getText();
+		  System.out.println(text);
+	}
+	
+	
 	public void acceptAlert() {
 		Alert a = driver.switchTo().alert();
 		a.accept();

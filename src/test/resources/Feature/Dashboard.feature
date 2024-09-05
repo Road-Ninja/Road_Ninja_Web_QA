@@ -145,5 +145,29 @@ Feature: Driver Jobs Page Testing
      Examples: 
       | url  																 | email 											 | password    |
       | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |        
+           
+           
+  @Notifications
+  Scenario: Company Page
+  Given Launch the URL "<url>"
+  And Enter email "<email>", password "<password>" and click on the next button
+  And click on the notification
+     Examples: 
+      | url  																 | email 											 | password    |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |   
                                      
-                                               
+  
+  @FilterDriver
+  Scenario: Filter the drivers
+  Given Launch the URL "<url>"
+  And Enter email "<email>", password "<password>" and click on the next button
+  And Filter the drivers with rated, popular, regins and vehicle types
+     Examples: 
+      | url  																 | email 											 | password    |
+      | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |   
+                      
+  
+  
+  
+  
+                                     

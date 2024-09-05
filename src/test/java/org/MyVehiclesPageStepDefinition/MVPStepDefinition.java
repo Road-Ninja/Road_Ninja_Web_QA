@@ -1,10 +1,13 @@
 package org.MyVehiclesPageStepDefinition;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
 import java.time.Duration;
 
 import org.Pages.myvehicles;
 import org.RNBase.UserBaseClass;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
 import io.cucumber.java.en.Given;
@@ -34,24 +37,27 @@ public class MVPStepDefinition extends UserBaseClass{
 	
 	@Given("Click on the any vehicle or tralier, edit button, Ownership, type of driving, enter vehicle make, vehicle model, vehicle fleet number, plate number, year and Click on the add vehicle button.")
 	public void click_on_the_any_vehicle_or_tralier_edit_button_ownership_type_of_driving_enter_vehicle_make_vehicle_model_vehicle_fleet_number_plate_number_year_and_click_on_the_add_vehicle_button() throws IOException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		mv = new myvehicles();
-		clicks(mv.getAddvehicle());
-		clicks(mv.getClose());
-		clicks(mv.getAddvehicle());
-		clicks(mv.getType());
-		clicks(mv.getVehicle());
-//		clicks(mv.getTrailer());
-		clicks(mv.getOwnership());
-		clicks(mv.getOwned());
+		clicks(mv.getSelectvehicle());
+		clicks(mv.getThreeDots());
+		clicks(mv.getEdit());
+//		clicks(mv.getOwnership());
+//		clicks(mv.getOwned());
 //		clicks(mv.getLeased());
+		sendKeys(mv.getTypeofDriving(), Keys.CONTROL + "a");
 		sendKeys(mv.getTypeofDriving(), excelRead(6, 1)+ Keys.ARROW_DOWN + Keys.ENTER);
+		sendKeys(mv.getVehicleMake(), Keys.CONTROL + "a");
 		sendKeys(mv.getVehicleMake(), excelRead(6, 2));
+		sendKeys(mv.getVehicleModel(), Keys.CONTROL + "a");
 		sendKeys(mv.getVehicleModel(), excelRead(6, 3));
+		sendKeys(mv.getVehiclefleetNumber(), Keys.CONTROL + "a");
 		sendKeys(mv.getVehiclefleetNumber(), excelRead(6, 4));
+		sendKeys(mv.getPlateNumber(), Keys.CONTROL + "a");
 		sendKeys(mv.getPlateNumber(), excelRead(6, 5));
+		sendKeys(mv.getYear(), Keys.CONTROL + "a");
 		sendKeys(mv.getYear(), excelRead(6, 6));
 		clicks(mv.getAdd());
+		refresh();
 	}
 	
 	
@@ -84,34 +90,34 @@ public class MVPStepDefinition extends UserBaseClass{
 	
 
 	@Given("Click on the add vehicle button, select type, Ownership, type of driving {string}, enter vehicle make {string}, vehicle model {string}, vehicle fleet number {string}, plate number {string}, year {string} and Click on the add vehicle button.")
-	public void click_on_the_add_vehicle_button_select_type_ownership_type_of_driving_enter_vehicle_make_vehicle_model_vehicle_fleet_number_plate_number_year_and_click_on_the_add_vehicle_button(String type, String make, String model, String fleet, String plate, String year) throws InterruptedException {
+	public void click_on_the_add_vehicle_button_select_type_ownership_type_of_driving_enter_vehicle_make_vehicle_model_vehicle_fleet_number_plate_number_year_and_click_on_the_add_vehicle_button(String type, String make, String model, String fleet, String plate, String year) throws InterruptedException, IOException {
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		mv = new myvehicles();
-		clicks(mv.getSelectvehicle());
-		clicks(mv.getThreeDots());
-		clicks(mv.getEdit());
-//		clicks(mv.getOwnership());
-//		clicks(mv.getOwned());
+		clicks(mv.getAddvehicle());
+		clicks(mv.getClose());
+		clicks(mv.getAddvehicle());
+		clicks(mv.getType());
+		clicks(mv.getVehicle());
+//		clicks(mv.getTrailer());
+		clicks(mv.getOwnership());
+		clicks(mv.getOwned());
 //		clicks(mv.getLeased());
-		sendKeys(mv.getTypeofDriving(), Keys.CONTROL + "a");
 		sendKeys(mv.getTypeofDriving(), type + Keys.ARROW_DOWN + Keys.ENTER);
 		Thread.sleep(4000);
-		sendKeys(mv.getVehicleMake(), Keys.CONTROL + "a");
 		sendKeys(mv.getVehicleMake(), make);
 		
-		sendKeys(mv.getVehicleModel(), Keys.CONTROL + "a");
 		sendKeys(mv.getVehicleModel(), model);
 		
-		sendKeys(mv.getVehiclefleetNumber(), Keys.CONTROL + "a");
 		sendKeys(mv.getVehiclefleetNumber(), fleet);
 		
-		sendKeys(mv.getPlateNumber(), Keys.CONTROL + "a");
 		sendKeys(mv.getPlateNumber(), plate);
 		
-		sendKeys(mv.getYear(), Keys.CONTROL + "a");
 		sendKeys(mv.getYear(), year);
 	
 		clicks(mv.getAdd());
 		refresh();
+
 	}
 	
 	@Given("Click on the Sort by plate number and applied the each sort by option")
@@ -133,8 +139,6 @@ public class MVPStepDefinition extends UserBaseClass{
 		clicks(mv.getSortBy());
 		clicks(mv.getSucessPer());
 	}
-
-
 	
-
+	
 }

@@ -176,18 +176,15 @@ public class JRStepDefinition extends UserBaseClass {
 //		clicks(r.getAddtodraft());
 		clicks(r.getSubmit());
 		
-		clicks(r.getItinerary());
+		
 	}
 	
-	@Given("Add a Additional terms {string}, tick the tickbox, select the assignment criteria and click on the send request button")
-	public void add_a_additional_terms_tick_the_tickbox_select_the_assignment_criteria_and_click_on_the_send_request_button(String term) {
+	@Given("Select the assignment criteria and then click on the next button, add a Additional terms {string}, tick the tickbox and send request")
+	public void select_the_assignment_criteria_and_then_click_on_the_next_button_add_a_additional_terms_tick_the_tickbox_and_send_request(String terms) throws InterruptedException {
 		r = new JobRequest();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
-		sendKeys(r.getAddterms(), term);
-		clicks(r.getAcceptICA());
+		Thread.sleep(2000);
 		clicks(r.getDrugalctest());
-		/*
 		clicks(r.getHealthsafetysign());
 		clicks(r.getSiteinduction());
 		clicks(r.getFirstaid());
@@ -202,15 +199,16 @@ public class JRStepDefinition extends UserBaseClass {
 		clicks(r.getOther());
 		
 		sendKeys(r.getEnterother(), "Others");
-		sendKeys(r.getDrugalclink(), "Drug");
-		sendKeys(r.getHealthsafetylink(), "Health");
-		sendKeys(r.getCompanypolicylink(), "Company");
-//		clicks(r.getSavetodraft());
-		 */
-		clicks(r.getSendrequest());
+		sendKeys(r.getDrugalclink(), "https://staging-app.roadninja.co.nz/");
+		sendKeys(r.getHealthsafetylink(), "https://uat-app.roadninja.co.nz/");
+		sendKeys(r.getCompanypolicylink(), "https://roadninja.co.nz/");
 		
+		// Aggrements
+//		sendKeys(r.getAddterms(), terms);
+//		clicks(r.getAcceptICA());
+
+		clicks(r.getSendrequest());
 	}
-
-
-
+	
+	
 }

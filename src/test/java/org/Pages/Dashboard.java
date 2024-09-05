@@ -52,7 +52,7 @@ public class Dashboard extends UserBaseClass{
 				}
 				
 	// Chart Menu
-				@FindBy(how = How.XPATH, using = "//section[@class='DashboardChart_root__3OXxq']//child::button")
+				@FindBy(how = How.XPATH, using = "(//span[@class='MuiButton-label'])[3]")
 				private WebElement chartMenu;
 				
 				@FindBy(how = How.XPATH, using = "//li[contains(text(),'In total')]")
@@ -135,8 +135,8 @@ public class Dashboard extends UserBaseClass{
 					return lastTime;
 				}
 				
-	// Top Vehicles list
-				@FindBy(how = How.XPATH, using = "//section[@class='DashboardVehicles_root__IPMJC']//child::button")
+	// Top Vehicles list 
+				@FindBy(how = How.XPATH, using = "//*[@id=\"root\"]/div/main/div/div/section[6]/div[1]/h2/button")
 				private WebElement topvehiclelist;
 				
 				@FindBy(how = How.XPATH, using = "//li[contains(text(),'Top jobs vehicles')]")
@@ -173,13 +173,13 @@ public class Dashboard extends UserBaseClass{
 				}	
 				
 	// Vehicle
-				@FindBy(how = How.XPATH, using = "//section[@class='DashboardVehicles_root__IPMJC']//div[2]//a[1]")
+				@FindBy(how = How.XPATH, using = "//section[@class='DashboardVehicles_root__6zQ6t']/div[2]/a[1]")
 				private WebElement firstVehicle;
 				
-				@FindBy(how = How.XPATH, using = "//section[@class='DashboardVehicles_root__IPMJC']//div[2]//a[2]")
+				@FindBy(how = How.XPATH, using = "//section[@class='DashboardVehicles_root__6zQ6t']/div[2]/a[1]")
 				private WebElement secondVehicle;
 				
-				@FindBy(how = How.XPATH, using = "//section[@class='DashboardVehicles_root__IPMJC']//div[2]//a[3]")
+				@FindBy(how = How.XPATH, using = "//section[@class='DashboardVehicles_root__6zQ6t']/div[2]/a[1]")
 				private WebElement thirdVehicle;
 
 				public WebElement getFirstVehicle() {
@@ -203,7 +203,7 @@ public class Dashboard extends UserBaseClass{
 				}
 				
 	// Company Profile
-				@FindBy(how = How.XPATH, using = "//div[@class='DashboardRatings_links__1EJUg']//a[@href='/company']")
+				@FindBy(how = How.XPATH, using = "//a[contains(text(),'View company profile')]")
 				private WebElement company;
 
 				public WebElement getCompany() {
@@ -211,7 +211,7 @@ public class Dashboard extends UserBaseClass{
 				}
 				
 	// Current Job
-				@FindBy(how = How.XPATH, using = "//a[@class='MuiPaper-root DashboardJobs_slide__T2zMj MuiPaper-elevation6 MuiPaper-rounded']")
+				@FindBy(how = How.XPATH, using = "//li[@class='swiper-slide swiper-slide-active']")
 				private WebElement currentJob;
 
 				public WebElement getCurrentJob() {
@@ -232,4 +232,99 @@ public class Dashboard extends UserBaseClass{
 				public WebElement getActivePagination() {
 					return activePagination;
 				}
+				
+	// Notification
+				@FindBy(how = How.XPATH, using = "(//ul)[12]/li[1]")
+				private WebElement notification1;
+
+				public WebElement getNotification1() {
+					return notification1;
+				}
+				
+	// Top rated drivers
+				@FindBy(how = How.XPATH, using = "//*[@id=\"root\"]/div/main/div/div/section[5]/div[1]/div/h2/button/span[1]")
+				private WebElement driverOpt;
+				
+				@FindBy(how = How.XPATH, using = "//li[contains(text(),'Top rated drivers')]")
+				private WebElement ratedDrivers;
+				
+				@FindBy(how = How.XPATH, using = "//li[contains(text(),'Most popular drivers')]")
+				private WebElement popularDrivers;
+				
+				public WebElement getDriverOpt() {
+					return driverOpt;
+				}
+
+				public WebElement getRatedDrivers() {
+					return ratedDrivers;
+				}
+
+				public WebElement getPopularDrivers() {
+					return popularDrivers;
+				}
+				
+				
+				
+	 // Regions
+				@FindBy(how = How.XPATH, using = "//span[contains(text(),'All regions')]")
+				private WebElement allRegions;
+				
+				@FindBy(how = How.XPATH, using = "//input[@name='N']")
+				private WebElement north;
+				
+				@FindBy(how = How.XPATH, using = "//input[@name='S']")
+				private WebElement south;
+				
+				@FindBy(how = How.XPATH, using = "//div[contains(text(),'Auckland')]")
+				private WebElement auckland;
+				
+				@FindBy(how = How.XPATH, using = "//div[@class='DashboardTopDrivers_panel__WGuve']/div/div//button[2]")
+				private WebElement cross;
+				
+				public WebElement getCross() {
+					return cross;
+				}
+
+				public WebElement getAllRegions() {
+					return allRegions;
+				}
+
+				public WebElement getNorth() {
+					return north;
+				}
+
+				public WebElement getSouth() {
+					return south;
+				}
+
+				public WebElement getAuckland() {
+					return auckland;
+				}
+				
+	// All vehicle types
+				
+				@FindBy(how = How.XPATH, using = "//span[contains(text(),'All vehicle types')]")
+				private WebElement allVehicles;
+				
+				@FindBy(how = How.XPATH, using = "//button[contains(text(),'View full list')]")
+				private WebElement fillList;
+				
+				@FindBy(how = How.XPATH, using = "//button[contains(text(),'Curtainsiders')]")
+				private WebElement vehicle;
+
+				public WebElement getAllVehicles() {
+					return allVehicles;
+				}
+
+				public WebElement getFillList() {
+					return fillList;
+				}
+
+				public WebElement getVehicle() {
+					return vehicle;
+				}
+				
+				
+				
+				
 }

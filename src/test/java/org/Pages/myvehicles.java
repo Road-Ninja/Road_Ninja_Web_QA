@@ -143,7 +143,7 @@ public class myvehicles extends UserBaseClass{
 		
 		// Delete vehicle
 		
-		@FindBy(how = How.XPATH, using = "(//ul)[2]//li[3]")
+		@FindBy(how = How.XPATH, using = "(//ul)[2]//li[2]")
 		private WebElement selectvehicle;
 		
 		@FindBy(how = How.XPATH, using = "//span[contains(text(),'upcoming jobs')]")

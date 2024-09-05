@@ -48,16 +48,18 @@ public class DashboardStepDefinition extends UserBaseClass {
 	@Given("click on the chart menu \\(In total) and selete the options of chart.")
 	public void click_on_the_chart_menu_in_total_and_selete_the_options_of_chart() throws Exception {
 		 db = new Dashboard();
-		 Thread.sleep(1000);
 		 clicks(db.getChartMenu());
-		 Thread.sleep(1000);
 		 clicks(db.getInTotal());
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
+		 clicks(db.getChartMenu());
 		 clicks(db.getLastMonth());
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
+		 clicks(db.getChartMenu());
 		 clicks(db.getLast30Days());
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
+		 clicks(db.getChartMenu());
 		 clicks(db.getLast2Months());
+		 Thread.sleep(2000);
 	}
 	
 	@Given("Click on the Job request of dashboard page.")
@@ -84,15 +86,22 @@ public class DashboardStepDefinition extends UserBaseClass {
 		db = new Dashboard();
 		clicks(db.getDrivers());
 		clicks(db.getFrequently());
+		Thread.sleep(2000);
+		clicks(db.getDrivers());
+		clicks(db.getLastTime());
 	}
 	
 	@Given("click on the top job vehicles and selete the options of top vehicle list.")
-	public void click_on_the_top_job_vehicles_and_selete_the_options_of_top_vehicle_list() {
+	public void click_on_the_top_job_vehicles_and_selete_the_options_of_top_vehicle_list() throws InterruptedException {
 		db = new Dashboard();
 		clicks(db.getTopvehiclelist());
+		clicks(db.getHoursVehicles());
+		Thread.sleep(2000);
+		clicks(db.getTopvehiclelist());
+		clicks(db.getLessfaultsvehicles());
+		Thread.sleep(2000);
+		clicks(db.getTopvehiclelist());
 		clicks(db.getJobsVehicles());
-//		clicks(db.getHoursVehicles());
-//		clicks(db.getLessfaultsvehicles());
 	}
 	
 	@Given("click on the view all vehicles")
@@ -102,12 +111,14 @@ public class DashboardStepDefinition extends UserBaseClass {
 	}
 	
 	@Given("click on the first, second and third vehicle from the vehicle grid")
-	public void click_on_the_first_second_and_third_vehicle_from_the_vehicle_grid() {
+	public void click_on_the_first_second_and_third_vehicle_from_the_vehicle_grid() throws InterruptedException {
 		db = new Dashboard();
 		clicks(db.getFirstVehicle());
 		back();
+		Thread.sleep(2000);
 		clicks(db.getSecondVehicle());
 		back();
+		Thread.sleep(2000);
 		clicks(db.getThirdVehicle());
 		back();
 	}
@@ -137,6 +148,46 @@ public class DashboardStepDefinition extends UserBaseClass {
 		Thread.sleep(2000);
 		clicks(db.getNextPagination());
 	}
+	
+	@Given("click on the notification")
+	public void click_on_the_notification() {
+		db = new Dashboard();
+		clicks(db.getNotification1());     
+	}
+	
+	@Given("Filter the drivers with rated, popular, regins and vehicle types")
+	public void filter_the_drivers_with_rated_popular_regins_and_vehicle_types() throws Exception {
+		db = new Dashboard();
+		
+		// driver filter option
+		clicks(db.getDriverOpt());
+		clicks(db.getRatedDrivers());
+		Thread.sleep(2000);
+		clicks(db.getDriverOpt());
+		clicks(db.getPopularDrivers());
+		
+		// all regions
+		clicks(db.getAllRegions());
+		clicks(db.getNorth());
+		clicks(db.getSouth());
+		Thread.sleep(2000);
+		clicks(db.getAuckland());
+		escape();
+		Thread.sleep(2000);
+		clicks(db.getCross());
+		
+		
+		// Types of vehicles
+		clicks(db.getAllVehicles());
+		clicks(db.getFillList());
+		clicks(db.getVehicle());
+		Thread.sleep(2000);
+		escape();
+		Thread.sleep(2000);
+		clicks(db.getCross());
+		
+	}
+
 
 	
 	

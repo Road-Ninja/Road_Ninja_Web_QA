@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 glue = {"org.DriverPageStepSefinition"},
 dryRun = false,
 plugin = {"html:report/WebReport"},
-tags = "@Search"
+tags = "@DeleteCurrentRequest"
 )
 public class TestRunnerDriverPage {
 

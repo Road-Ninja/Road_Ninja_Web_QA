@@ -116,8 +116,7 @@ Feature: JOb Request Testing
     And Enter the fixed price "<rate>" and click on the search
     And Select the driver and click on the Next button
     And Enter the job title "<title>", description "<description>", select the vehicle, tick the tickbox and click on the next button
-    And Select the assignment criteria and click on the send request button
-   # And Add a Additional terms "<terms>", tick the tickbox,
+    And Select the assignment criteria and then click on the next button, add a Additional terms "<terms>", tick the tickbox and send request
      Examples: 
       | url  																 | email 											 | password    | rate | title | description | terms |
       | https://uat-app.roadninja.co.nz/ | susant+staging1@roadninja.co.nz | Tester123@ |  500 | Testing | Hello Hello | Please follw the General Terms |
